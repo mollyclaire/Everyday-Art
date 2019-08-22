@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import ArtCard from "./ArtCard";
 
 class SearchResult extends Component {
     state = {
-      results: []
+      results: {}
     };
 
     componentDidMount() {
@@ -13,17 +14,20 @@ class SearchResult extends Component {
     searchArt = query => {
         API.search(query)
           .then(res => 
-        //   this.setState({ results: res.data.data })
-        console.log(res)
+          this.setState({ results: res.data })
+        // console.log(res.data)
           )
           .catch(err => console.log(err));
       };
 
     render() {
         return (
-            <h1>Hi
-                results={this.state.results}
-            </h1>
+            <ArtCard 
+            title={this.state.results.title}
+            src={this.state.results.src}
+            medium={this.state.results.medium}
+            artistDisplayName={this.state.results.artistDisplayName}
+            />
             
         )
     }
