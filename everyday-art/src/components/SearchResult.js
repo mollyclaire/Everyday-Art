@@ -8,7 +8,7 @@ class SearchResult extends Component {
     };
 
     componentDidMount() {
-        this.searchArt(436535)
+        this.searchArt(Math.floor(Math.random() * 468991))
     }
 
     searchArt = query => {
