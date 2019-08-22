@@ -6,15 +6,25 @@ class SearchResult extends Component {
       results: []
     };
 
+    componentDidMount() {
+        this.searchArt(436535)
+    }
+
     searchArt = query => {
         API.search(query)
-          .then(res => this.setState({ results: res.data.data }))
+          .then(res => 
+        //   this.setState({ results: res.data.data })
+        console.log(res)
+          )
           .catch(err => console.log(err));
       };
 
     render() {
         return (
-            <h1>Hi</h1>
+            <h1>Hi
+                results={this.state.results}
+            </h1>
+            
         )
     }
 };
