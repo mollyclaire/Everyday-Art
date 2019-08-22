@@ -24,7 +24,7 @@ class SearchResult extends Component {
         return (
             <ArtCard 
             title={this.state.results.title}
-            src={this.state.results.src}
+            primaryImageSmall={this.state.results.primaryImageSmall}
             medium={this.state.results.medium}
             artistDisplayName={this.state.results.artistDisplayName}
             />
