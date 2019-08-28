@@ -22,8 +22,8 @@ search: $.ajax({
     xhr.setRequestHeader('api_key', 'RPZUcvIfZVPE2TUM7C0ArWNxOGQIIxxF');
   },
   data: {},
-  success: function () { },
-  error: function () { },
+  success: function () {console.log ("success")},
+  error: function () {console.log("error")},
 })
 };
 

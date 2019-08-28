@@ -3,19 +3,20 @@ import API from "../utils/API";
 import ArtCard from "./ArtCard";
 
 
+
 class SearchResult extends Component {
     state = {
       results: {}
     };
 
     componentDidMount() {
-        // this.searchArt(Math.floor(Math.random() * 468991))
+        this.searchArt()
 
         // APIArtsy.getArtists().then(res => { console.log(res) })
     }
 
     searchArt () {
-        API.search()
+        API.search
           .then(res => 
           // this.setState({ results: res.data })
         console.log(res)
