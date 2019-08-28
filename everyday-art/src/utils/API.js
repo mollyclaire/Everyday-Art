@@ -16,7 +16,7 @@ import $ from "jquery";
 // };
 export default {
 search: $.ajax({
-  url: 'https://www.brooklynmuseum.org/api/v2/object?has_images=1',
+  url: 'https://www.brooklynmuseum.org/api/v2/object',
   type: 'GET',
   beforeSend: function (xhr) {
     xhr.setRequestHeader('api_key', 'RPZUcvIfZVPE2TUM7C0ArWNxOGQIIxxF');
