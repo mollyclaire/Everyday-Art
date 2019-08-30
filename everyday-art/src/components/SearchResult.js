@@ -19,26 +19,28 @@ class SearchResult extends Component {
         API.search
           .then(res => 
           this.setState({ results: res.data })
-        // console.log(res.data)
+        // console.log(res)
           )
           .catch(err => console.log(err));
       };
 
     render() {
-      // const artworks = this.state.results
+      const artworks = this.state.results
 
       
         return (
           <div>
-          this.state.results.map(artwork => {
-<ArtCard 
-            title={this.state.results.title}
-            // primaryImageSmall={this.state.results.primaryImageSmall}
-            medium={this.state.results.medium}
-            artists={this.state.results.artists}
-            description={this.state.results.description}
-            />
-          })
+          {artworks.map(artwork => {
+            return (
+            <ArtCard 
+              key={artwork.id}
+              title={artwork.title}
+              // primaryImageSmall={this.state.results.primaryImageSmall}
+              medium={artwork.medium}
+              artists={artwork.artists}
+              description={artwork.description}
+            /> )}
+          )}
             
             </div>
         )
