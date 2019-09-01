@@ -5,10 +5,13 @@ import ArtCard from "./ArtCard";
 
 
 class SearchResult extends Component {
-    state = {
-      results: []
+  constructor() {
+    super()
+    this.state = {
+      results: [{}]
     };
-
+    this.searchArt = this.searchArt.bind(this);
+  }
     componentDidMount() {
         this.searchArt()
 
@@ -19,28 +22,28 @@ class SearchResult extends Component {
         API.search
           .then(res => 
           this.setState({ results: res.data })
-        // console.log(res)
+        // console.log(res.data)
           )
           .catch(err => console.log(err));
       };
 
     render() {
-      const artworks = this.state.results
+      const artworks = this.state.results.map(artwork => (
+        <div key={artwork.id}>
+          <h4>{artwork.title}</h4>
+          {/* <h5>{artwork.artists}</h5> */}
+          <h5>{artwork.medium}</h5>
+          <p>{artwork.description}</p>
+        </div>
+        
+      ));
 
-      
         return (
           <div>
-          {artworks.map(artwork => {
-            return (
-            <ArtCard 
-              key={artwork.id}
-              title={artwork.title}
-              // primaryImageSmall={this.state.results.primaryImageSmall}
-              medium={artwork.medium}
-              artists={artwork.artists}
-              description={artwork.description}
-            /> )}
-          )}
+          <h1>Art of the Day</h1>
+          <div>
+          {artworks}
+          </div>
             
             </div>
         )

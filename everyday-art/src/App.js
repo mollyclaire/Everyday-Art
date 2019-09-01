@@ -2,7 +2,9 @@ import React from "react";
 import SearchResult from "./components/SearchResult";
 
 function App() {
-  return <SearchResult />;
+  return (
+  <SearchResult />
+  )
 }
 
 export default App;
