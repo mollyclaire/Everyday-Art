@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import ArtCard from "./ArtCard";
+// import ArtCard from "./ArtCard";
+import Container from "./Container";
 
 
 
@@ -39,15 +40,39 @@ class SearchResult extends Component {
       ));
 
         return (
-          <div>
-          <h1>Art of the Day</h1>
-          <div>
-          {artworks}
-          </div>
-            
+          <Container fullVertical>
+            <div>
+              <h1>Art of the Day</h1>
+                <div>
+                  {artworks}
+                </div>
             </div>
+          </Container>
         )
     }
 };
 
 export default SearchResult;
+
+
+// render() {
+//     const artworks = this.state.results
+
+    
+//       return (
+//         <div>
+//         {artworks.map(artwork => {
+//           return (
+//           <ArtCard 
+//             key={artwork.id}
+//             title={artwork.title}
+//             primaryImageSmall={this.state.results.primaryImageSmall}
+//             medium={artwork.medium}
+//             artists={artwork.artists}
+//             description={artwork.description}
+//           /> )}
+//         )}
+          
+//           </div>
+//       )
+//   }
