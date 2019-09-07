@@ -9,11 +9,10 @@ import Header from "./Header";
 class SearchResult extends Component {
   constructor() {
     super()
-    var today = new Date(),
-        date = (today.getMonth() + 1) + '-' + today.getDate();
+    
     this.state = {
       results: [{}],
-      date: date
+      
       
     };
 
@@ -54,15 +53,15 @@ render() {
 
     return (
       
-      <Container fullVertical>
+      // <Container fullVertical>
         <div>
-          <h1>Art for {this.today}</h1>
-          <Header>{this.today}</Header>
+          
+          
             <div>
               {artworks[Math.floor(Math.random()* 11)]}
             </div>
         </div>
-      </Container>
+      // </Container>
     )
 }
 
