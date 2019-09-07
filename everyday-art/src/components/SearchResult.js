@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 // import ArtCard from "./ArtCard";
 import Container from "./Container";
+import Header from "./Header";
 
 
 
@@ -47,9 +48,9 @@ render() {
     return (
       <Container fullVertical>
         <div>
-          <h1>Art of the Day</h1>
+          <Header>Art for {Date.now()}</Header>
             <div>
-              {artworks}
+              {artworks[Math.floor(Math.random()* 11)]}
             </div>
         </div>
       </Container>
