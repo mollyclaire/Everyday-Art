@@ -27,30 +27,36 @@ class SearchResult extends Component {
           )
           .catch(err => console.log(err));
       };
+render() {
+  // const imgPath = "http://cdn2.brooklynmuseum.org/images/opencollection/objects/size/2/"
+  const artworks = this.state.results.map(artwork => (
+    <div key={artwork.id}>
+      <img 
+        alt="main" 
+        // src={`${imgPath}${artwork.primary_image}`}>
+        src="https://via.placeholder.com/200">
+      </img>
+      <h4>{artwork.title}</h4>
+      {/* <h5>{artwork.artists}</h5> */}
+      <h5>{artwork.medium}</h5>
+      <p>{artwork.description}</p>
+    </div>
+    
+  ));
 
-    render() {
-      const artworks = this.state.results.map(artwork => (
-        <div key={artwork.id}>
-          <h4>{artwork.title}</h4>
-          {/* <h5>{artwork.artists}</h5> */}
-          <h5>{artwork.medium}</h5>
-          <p>{artwork.description}</p>
-        </div>
-        
-      ));
-
-        return (
-          <Container fullVertical>
+    return (
+      <Container fullVertical>
+        <div>
+          <h1>Art of the Day</h1>
             <div>
-              <h1>Art of the Day</h1>
-                <div>
-                  {artworks}
-                </div>
+              {artworks}
             </div>
-          </Container>
-        )
-    }
-};
+        </div>
+      </Container>
+    )
+}
+
+}
 
 export default SearchResult;
 
@@ -76,3 +82,28 @@ export default SearchResult;
 //           </div>
 //       )
 //   }
+
+
+
+// render() {
+//   const artworks = this.state.results.map(artwork => (
+//     <div key={artwork.id}>
+//       <h4>{artwork.title}</h4>
+//       {/* <h5>{artwork.artists}</h5> */}
+//       <h5>{artwork.medium}</h5>
+//       <p>{artwork.description}</p>
+//     </div>
+    
+//   ));
+
+//     return (
+//       <Container fullVertical>
+//         <div>
+//           <h1>Art of the Day</h1>
+//             <div>
+//               {artworks}
+//             </div>
+//         </div>
+//       </Container>
+//     )
+// }
