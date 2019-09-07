@@ -9,9 +9,14 @@ import Header from "./Header";
 class SearchResult extends Component {
   constructor() {
     super()
+    var today = new Date(),
+        date = (today.getMonth() + 1) + '-' + today.getDate();
     this.state = {
-      results: [{}]
+      results: [{}],
+      date: date
+      
     };
+
     this.searchArt = this.searchArt.bind(this);
   }
     componentDidMount() {
@@ -28,6 +33,8 @@ class SearchResult extends Component {
           )
           .catch(err => console.log(err));
       };
+
+
 render() {
   // const imgPath = "http://cdn2.brooklynmuseum.org/images/opencollection/objects/size/2/"
   const artworks = this.state.results.map(artwork => (
@@ -46,9 +53,11 @@ render() {
   ));
 
     return (
+      
       <Container fullVertical>
         <div>
-          <Header>Art for {Date.now()}</Header>
+          <h1>Art for {this.today}</h1>
+          <Header>{this.today}</Header>
             <div>
               {artworks[Math.floor(Math.random()* 11)]}
             </div>

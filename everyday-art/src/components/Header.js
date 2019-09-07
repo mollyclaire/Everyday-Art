@@ -6,6 +6,8 @@ const Header = styled.div`
     text-align: center;
     color: palevioletred;
     padding: 2em;
+    display: flex;
+    justify-content: center;
 `
 
 export default Header;
