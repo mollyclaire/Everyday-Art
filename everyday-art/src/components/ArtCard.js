@@ -6,7 +6,7 @@ function ArtCard(props) {
         {/* <img alt={props.title} className="img-fluid" src={props.primaryImageSmall} style={{ margin: "0 auto" }} /> */}
         <h3>Title: {props.title}</h3>
         <h3>Medium: {props.medium}</h3>
-        <h3>Artist: {props.artists}</h3>
+        {/* <h3>Artist: {props.artists}</h3> */}
         <h3>Description: {props.description}</h3>
       </div>
     );
@@ -14,4 +14,3 @@ function ArtCard(props) {
   
   export default ArtCard;
 
-  

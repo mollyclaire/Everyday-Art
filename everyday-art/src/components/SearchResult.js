@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 // import ArtCard from "./ArtCard";
-import Container from "./Container";
-import Header from "./Header";
+// import Container from "./Container";
+// import Header from "./Header";
 
 
 
@@ -27,8 +27,8 @@ class SearchResult extends Component {
     searchArt () {
         API.search
           .then(res => 
-          this.setState({ results: res.data })
-        // console.log(res.data)
+          // this.setState({ results: res.data })
+        console.log(res.data)
           )
           .catch(err => console.log(err));
       };
@@ -52,16 +52,11 @@ render() {
   ));
 
     return (
-      
-      // <Container fullVertical>
         <div>
-          
-          
             <div>
               {artworks[Math.floor(Math.random()* 11)]}
             </div>
         </div>
-      // </Container>
     )
 }
 
