@@ -22,6 +22,7 @@ class Main extends Component {
              result = {
                  key: result.id,
                  title: result.title,
+                //  artist: result.artists[0],
                  medium: result.medium,
                  description: result.description
              }
@@ -39,7 +40,9 @@ class Main extends Component {
             <div>
             {this.state.artworks.length ? (
                 <ArtCard
-                artworks={this.state.artworks}/>
+                key={this.state.artworks.id}
+                artworks={this.state.artworks}
+                />
             ) : (<h3> No Results </h3>)}
             </div>
         )

@@ -1,7 +1,7 @@
 import React from "react"; 
 import styled from "styled-components";
 
-const Header = styled.div`
+const Art = styled.div`
     font-size: 1.5em;
     text-align: center;
     color: palevioletred;
@@ -10,5 +10,23 @@ const Header = styled.div`
     justify-content: center;
 `
 
-export default Header;
+const Date = styled.div`
+  color: black;
+  text-align: center;
+`
 
+class Header extends React.Component  {
+    state = {}
+
+    render() {
+        return(
+            <div>
+                <Art>ART for</Art>
+                <Date>TODAY</Date>
+            </div>
+  
+        )
+}
+}
+
+  export default Header;
