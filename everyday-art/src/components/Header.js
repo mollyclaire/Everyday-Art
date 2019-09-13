@@ -15,7 +15,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 2px solid black;
 `
 
 const Date = styled.img`

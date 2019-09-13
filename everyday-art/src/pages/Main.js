@@ -28,6 +28,7 @@ class Main extends Component {
              }
              return result;
          })
+    
          this.setState({artworks: results})
          console.log({artworks: results})
          
@@ -39,6 +40,7 @@ class Main extends Component {
         return (
             <div>
             {this.state.artworks.length ? (
+                
                 <ArtCard
                 key={this.state.artworks.id}
                 artworks={this.state.artworks}

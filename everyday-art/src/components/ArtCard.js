@@ -5,6 +5,7 @@ function ArtCard(props) {
 const Image = styled.img`
   justify-content: center;
   border: 3px solid black;
+  margin-top: 1em;
 `
 
 const Wrapper = styled.div`
@@ -13,10 +14,14 @@ const Wrapper = styled.div`
   
 `
 
+const Container = styled.div`
+  display: flex;
+`
+
   return(
   props.artworks.map(artwork => {
     return (
-      <div className="container">
+      <Container>
         <Wrapper>
           <Image 
             alt="main" 
@@ -29,7 +34,7 @@ const Wrapper = styled.div`
         <p>Medium: {artwork.medium}</p>
         <p>Artist: {artwork.artist}</p>
         <p>Description: {artwork.description}</p>
-      </div>)
+      </Container>)
     
   })
   )
