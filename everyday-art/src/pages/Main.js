@@ -40,7 +40,6 @@ class Main extends Component {
         return (
             <div>
             {this.state.artworks.length ? (
-                
                 <ArtCard
                 key={this.state.artworks.id}
                 artworks={this.state.artworks}

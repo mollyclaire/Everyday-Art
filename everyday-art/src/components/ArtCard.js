@@ -6,6 +6,7 @@ const Image = styled.img`
   justify-content: center;
   border: 3px solid black;
   margin-top: 1em;
+
 `
 
 const Wrapper = styled.div`
@@ -16,6 +17,11 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
+`
+
+const Paragraph = styled.div`
+  flex-direction: column;
 `
 
   return(
@@ -33,7 +39,7 @@ const Container = styled.div`
         <p>Title: {artwork.title}</p>
         <p>Medium: {artwork.medium}</p>
         <p>Artist: {artwork.artist}</p>
-        <p>Description: {artwork.description}</p>
+        <Paragraph>Description: {artwork.description}</Paragraph>
       </Container>)
     
   })
