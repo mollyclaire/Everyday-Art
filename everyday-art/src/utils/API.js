@@ -15,7 +15,7 @@ import $ from "jquery";
 //   }
 // };
 
-const artArray = ["1873", "207865", "185643", "1152"];
+const artArray = ["1873", "207865", "185643", "1152", "1364", "170224", "2279","2337", "1594", "5046"];
 
 let num = artArray[Math.floor(Math.random() * artArray.length)]
 console.log(num)
