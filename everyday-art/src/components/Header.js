@@ -1,6 +1,6 @@
 import React from "react"; 
 import styled from "styled-components";
-import icon from './calendar.png';
+// import icon from './calendar.png';
 
 const Art = styled.div`
     font-size: 2em;
@@ -8,18 +8,21 @@ const Art = styled.div`
     color: black;
     padding: .5em;
     display: flex;
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat', sans-serif;
 `
 
 const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    padding: 1.5em;
+    
 `
 
-const Date = styled.img`
-    width: 150px;
+const Date = styled.div`
+    
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif
 `
 
 class Header extends React.Component  {
@@ -43,7 +46,7 @@ class Header extends React.Component  {
             <div>
                 <Container>
                     <Art>ART for</Art>
-                    <Date src={icon} alt="Calendar"/>
+                    <Date>September 16</Date>
                 </Container>
             </div>
   

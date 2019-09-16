@@ -4,7 +4,6 @@ import styled from "styled-components";
 function ArtCard(props) {
 const Image = styled.img`
   justify-content: center;
-  border: 3px solid black;
   margin: 1em;
 
 `
@@ -18,6 +17,12 @@ const Wrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
+  padding: 0 0 32px;
+  margin: 48px auto 0;
+  width: 75%;
+  box-shadow: 0 0 20px rgba(0, 0, 5, .05), 0 0px 40px rgba(0, 0, 0, .08);
+  border-radius: 5px;
 `
 
 const Paragraph = styled.div`

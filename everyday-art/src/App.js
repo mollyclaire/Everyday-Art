@@ -6,7 +6,7 @@ import Main from "./pages/Main";
 
 function App() {
   return (
-    <Container>
+    <Container fullVertical>
       <Header></Header>
       <Main />
     </Container>
