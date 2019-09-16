@@ -28,21 +28,24 @@ const Details = styled.div`
   flex-direction: column;
 `
 
+const imgPath = "http://cdn2.brooklynmuseum.org/images/opencollection/objects/size1/"
+
 return(
   
       <Container>
         <Wrapper>
           <Image 
             alt="main" 
-            // src={`${imgPath}${artwork.primary_image}`}>
-            src="https://via.placeholder.com/200">
+            src={`${imgPath}${props.primary_image}`}>
+            {/* src="https://via.placeholder.com/200"> */}
           </Image>
         </Wrapper>
         {/* <img alt={props.title} className="img-fluid" src={props.primaryImageSmall} style={{ margin: "0 auto" }} /> */}
         <Details>
           <p>Title: {props.title}</p> 
-          <p>Medium: {props.medium}</p> 
           <p>Artist: {props.artist}</p>
+          <p>Medium: {props.medium}</p> 
+          <p>Year: {props.year}</p>
         </Details>
         <Paragraph>Description: {props.description}</Paragraph>
       </Container>)

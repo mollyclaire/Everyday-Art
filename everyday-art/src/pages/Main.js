@@ -53,6 +53,8 @@ class Main extends Component {
                 medium={this.state.artworks[10]}
                 description={this.state.artworks[32][0].content}
                 artist={this.state.artworks[33][0].name}
+                year={this.state.artworks[4]}
+                primary_image={this.state.artworks[27]}
                 />
             ) : (<h3> No Results </h3>)}
             </div>
