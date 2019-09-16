@@ -15,9 +15,16 @@ import $ from "jquery";
 //   }
 // };
 
+const artArray = ["1873", "207865", "185643", "1152"];
+
+let num = artArray[Math.floor(Math.random() * artArray.length)]
+console.log(num)
+  
+
+
 export default {
 search: $.ajax({
-  url: 'https://www.brooklynmuseum.org/api/v2/object',
+  url: 'https://www.brooklynmuseum.org/api/v2/object/' + num,
   type: 'GET',
   beforeSend: function (xhr) {
     xhr.setRequestHeader('api_key', 'RPZUcvIfZVPE2TUM7C0ArWNxOGQIIxxF');

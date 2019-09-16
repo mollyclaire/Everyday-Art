@@ -5,7 +5,7 @@ function ArtCard(props) {
 const Image = styled.img`
   justify-content: center;
   border: 3px solid black;
-  margin-top: 1em;
+  margin: 1em;
 
 `
 
@@ -24,6 +24,10 @@ const Paragraph = styled.div`
   flex-direction: column;
 `
 
+const Details = styled.div`
+  flex-direction: column;
+`
+
   return(
   props.artworks.map(artwork => {
     return (
@@ -36,9 +40,11 @@ const Paragraph = styled.div`
           </Image>
         </Wrapper>
         {/* <img alt={props.title} className="img-fluid" src={props.primaryImageSmall} style={{ margin: "0 auto" }} /> */}
-        <p>Title: {artwork.title}</p>
-        <p>Medium: {artwork.medium}</p>
-        <p>Artist: {artwork.artist}</p>
+        <Details>
+          <p>Title: {artwork.title}</p> 
+          <p>Medium: {artwork.medium}</p> 
+          <p>Artist: {artwork.artist}</p>
+        </Details>
         <Paragraph>Description: {artwork.description}</Paragraph>
       </Container>)
     
