@@ -1,6 +1,7 @@
 import React from "react"; 
 import styled from "styled-components";
 // import icon from './calendar.png';
+import Time from "../utils/Time";
 
 const Art = styled.div`
     font-size: 2em;
@@ -47,7 +48,7 @@ class Header extends React.Component  {
             <div>
                 <Container>
                     <Art>ART for</Art>
-                    <Date>September 16</Date>
+                    <Time></Time>
                 </Container>
             </div>
   
