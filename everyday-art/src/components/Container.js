@@ -26,7 +26,6 @@ const Container = styled.div`
         return "25px"
     }};
 
-    
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 
     

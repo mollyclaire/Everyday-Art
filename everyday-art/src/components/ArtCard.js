@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 function ArtCard(props) {
 const Image = styled.img`
-  
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -49,7 +48,7 @@ return(
         
         {/* <img alt={props.title} className="img-fluid" src={props.primaryImageSmall} style={{ margin: "0 auto" }} /> */}
         <Details>
-          <p>Title: {props.title}</p> 
+          <h4>Title: {props.title}</h4> 
           <p>Artist: {props.artist}</p>
           <p>Medium: {props.medium}</p> 
           <p>Year: {props.year}</p>

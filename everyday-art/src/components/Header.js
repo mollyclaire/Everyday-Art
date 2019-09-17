@@ -5,26 +5,23 @@ import Time from "../utils/Time";
 
 const Art = styled.div`
     font-size: 2em;
-    text-align: center;
+    text-align: right;
     color: black;
     padding: .3em;
     display: flex;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    margin-right: 3px;
+    
 `
 
 const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5em;
+    padding: 1em 1em 0em 1em;
+   
     
-`
-
-const Date = styled.div`
-    
-    font-size: 2em;
-    font-family: 'Montserrat', sans-serif
 `
 
 class Header extends React.Component  {

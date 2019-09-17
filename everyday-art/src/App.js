@@ -3,7 +3,7 @@ import React from "react";
 import Container from "./components/Container";
 import Header from "./components/Header";
 import Main from "./pages/Main";
-import styles from './App.css';
+import styles from "./App.css";
 
 function App() {
   return (
