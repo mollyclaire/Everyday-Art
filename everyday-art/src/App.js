@@ -3,13 +3,16 @@ import React from "react";
 import Container from "./components/Container";
 import Header from "./components/Header";
 import Main from "./pages/Main";
+import styles from './App.css';
 
 function App() {
   return (
-    <Container fullVertical>
-      <Header></Header>
-      <Main />
-    </Container>
+    <div className="app">
+      <Container fullVertical>
+        <Header></Header>
+        <Main />
+      </Container>
+    </div>
   )
 }
 

@@ -6,9 +6,10 @@ const Art = styled.div`
     font-size: 2em;
     text-align: center;
     color: black;
-    padding: .5em;
+    padding: .3em;
     display: flex;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 `
 
 const Container = styled.div`
