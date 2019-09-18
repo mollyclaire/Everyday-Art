@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import ArtCard from "../components/ArtCard";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 import firebase from "../firebase";
 
 
 class Main extends Component {
-    // creating initial state
-    state ={
+    constructor() {
+        super();
+    this.state ={
         artworks: [],
-        saved: ""
+        
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+}
 
     componentDidMount() {
         this.searchArt()
@@ -46,9 +49,10 @@ class Main extends Component {
 
       handleSubmit(e) {
           e.preventDefault();
+          console.log(e);
           const itemsRef = firebase.database().ref("items");
           const item = {
-              saved: this.state.artworks.id
+              saved: this.state.artworks
           }
           itemsRef.push(item);
       }
@@ -68,12 +72,12 @@ class Main extends Component {
                 primary_image={this.state.artworks[27]}
                 />
             ) : (<h3> No Results </h3>)}
+            <form onSubmit={this.handleSubmit}>
+            <button
+                value={this.state.artworks}
+            >Save</button></form>
 
-            <Button 
-                onClick={this.handleSubmit}
-                value={this.state.artworks.id}
-
-            />
+            
             </div>
         )
     }
