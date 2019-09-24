@@ -4,7 +4,8 @@ import ArtCard from "../components/ArtCard";
 import Button from "../components/Button";
 import firebase from "../firebase";
 // import { relative } from "path";
-import { Redirect } from 'react-router-dom'
+import { Redirect } from "react-router-dom"
+
 
 
 class Main extends Component {
