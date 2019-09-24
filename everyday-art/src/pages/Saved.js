@@ -44,7 +44,9 @@ render() {
           console.log(item);
         return (
           <li key={item.id}>
-            <p>{item.saved[0]}</p>
+            
+            <h3>Artist: {item.saved[33][0].name}</h3>
+            <h5>Title: {item.saved[1]}</h5>
           </li>
         )
       })}
