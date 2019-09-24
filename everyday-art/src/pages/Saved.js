@@ -39,12 +39,12 @@ render() {
         <section className='display-item'>
   <div className="wrapper">
     <ul>
-    
       {this.state.items.map((item) => {
           console.log(this.state.items)
+          console.log(item);
         return (
           <li key={item.id}>
-            
+            <p>{item.saved[0]}</p>
           </li>
         )
       })}
