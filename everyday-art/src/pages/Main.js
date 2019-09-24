@@ -3,7 +3,8 @@ import API from "../utils/API";
 import ArtCard from "../components/ArtCard";
 import Button from "../components/Button";
 import firebase from "../firebase";
-import { relative } from "path";
+// import { relative } from "path";
+import { Redirect } from 'react-router-dom'
 
 
 class Main extends Component {
@@ -11,6 +12,7 @@ class Main extends Component {
         super();
     this.state ={
         artworks: [],
+        redirect: false
         
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,6 +50,17 @@ class Main extends Component {
         //   .catch(err => console.log(err));
       })};
 
+      setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+      renderRedirect = () => {
+        if (this.state.redirect) {
+          return <Redirect to='/saved' />
+        }
+      }
+
       handleSubmit(e) {
           e.preventDefault();
           console.log(e);
@@ -56,6 +69,9 @@ class Main extends Component {
               saved: this.state.artworks
           }
           itemsRef.push(item);
+          this.setRedirect();
+          this.renderRedirect();
+
       }
 
     render() {
@@ -73,8 +89,9 @@ class Main extends Component {
                 primary_image={this.state.artworks[27]}
                 />
             ) : (<h3> No Results </h3>)}
-            <div style={{display: "flex", justifyContent: "center", border: "1px, solid, black"}}>
+            <div style={{display: "flex", justifyContent: "center"}}>
                 <form onSubmit={this.handleSubmit}>
+                    {this.renderRedirect()}
                     <Button
                         value={this.state.artworks}
                     ></Button>
