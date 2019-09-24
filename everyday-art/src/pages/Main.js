@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import ArtCard from "../components/ArtCard";
-// import Button from "../components/Button";
+import Button from "../components/Button";
 import firebase from "../firebase";
+import { relative } from "path";
 
 
 class Main extends Component {
@@ -72,11 +73,13 @@ class Main extends Component {
                 primary_image={this.state.artworks[27]}
                 />
             ) : (<h3> No Results </h3>)}
-            <form onSubmit={this.handleSubmit}>
-            <button
-                value={this.state.artworks}
-            >Save</button></form>
-
+            <div style={{display: "flex", justifyContent: "center", border: "1px, solid, black"}}>
+                <form onSubmit={this.handleSubmit}>
+                    <Button
+                        value={this.state.artworks}
+                    ></Button>
+                </form>
+            </div>
             
             </div>
         )

@@ -4,6 +4,9 @@ import firebase from "../firebase";
 class Saved extends Component {
     constructor() {
         super();
+
+    
+
     this.state ={
         items: [],
         
@@ -14,11 +17,12 @@ componentDidMount() {
     const itemsRef = firebase.database().ref('items');
     itemsRef.on('value', (snapshot) => {
         let items = snapshot.val();
+        console.log(items);
         let newState = [];
         for (let item in items) {
           newState.push({
             id: item,
-            artworks: items[item].artworks
+            saved: items[item].saved
           });
         } 
         this.setState({
@@ -27,6 +31,8 @@ componentDidMount() {
         
 })
 }
+
+
 
 render() {
     return (
@@ -38,7 +44,7 @@ render() {
           console.log(this.state.items)
         return (
           <li key={item.id}>
-            <p>{item.artworks}</p>
+            
           </li>
         )
       })}
