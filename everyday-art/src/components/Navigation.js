@@ -1,41 +1,30 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-// import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-// import LocationOnIcon from '@material-ui/icons/LocationOn';
-import { Redirect } from "react-router-dom"
+import React, { Component } from 'react';
+import { slide as Menu } from 'react-burger-menu';
 
-const useStyles = makeStyles({
-  root: {
-    width: "100%"
-  },
-});
+class Navigation extends Component {
+    constructor() {
+        super();
+        this.state = {
 
-export default function SimpleBottomNavigation() {
-  const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const renderRedirect = () => {
+        }
+        // this.showSettings = this.showSettings.bind(this);
+    }
     
-      return <Redirect to='/saved' />
+    // showSettings (event) {
+    //     event.preventDefault();
     
-  }
+    //   }
 
-  return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        console.log(event)
-        setValue(newValue);
-      }}
-      showLabels
-      className={classes.root}
-    >
-      {/* <BottomNavigationAction label="Recents" icon={<RestoreIcon />} /> */}
-      <BottomNavigationAction label="Saved" icon={<FavoriteIcon />} />
-      {/* <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} /> */}
-    </BottomNavigation>
-  );
+      render () {
+        return (
+          <Menu right>
+            <a id="home" className="menu-item" href="/saved">Saved</a>
+            {/* <a id="about" className="menu-item" href="/about">About</a>
+            <a id="contact" className="menu-item" href="/contact">Contact</a> */}
+            {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
+          </Menu>
+        );
+      }
 }
+
+export default Navigation;

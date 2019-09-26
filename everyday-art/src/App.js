@@ -6,18 +6,18 @@ import Main from "./pages/Main";
 import Saved from "./pages/Saved";
 import styles from "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import SimpleBottomNavigation from "../src/components/Navigation";
+import Navigation from "../src/components/Navigation";
 
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <Container fullVertical>
-          <Header></Header>
+        <Container full>
+          <Header><Navigation /></Header>
           <Route exact path="/" component={Main} />
           <Route exact path="/saved" component={Saved} />
-          <SimpleBottomNavigation />
+          
         </Container>
       </div>
     </Router>
