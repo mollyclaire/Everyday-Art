@@ -53,7 +53,7 @@ return(
           <p>Medium: {props.medium}</p> 
           <p>Year: {props.year}</p>
         </Details>
-        <Paragraph>Description: {props.description}</Paragraph>
+        <Paragraph>Description: {props.description.replace(/(<([^>]+)>)/ig,"")}</Paragraph>
       </Container>
       
 )
