@@ -7,7 +7,8 @@ import firebase from "../firebase";
 import { Redirect } from "react-router-dom"
 
 
-
+// This class component is one that renders the artwork from the Brooklyn Museum API 
+// and displays an Art Card component based on the information received. 
 class Main extends Component {
     constructor() {
         super();
@@ -22,8 +23,6 @@ class Main extends Component {
     componentDidMount() {
         this.searchArt()
     }
-
-   
 
     searchArt () {
         API.search
