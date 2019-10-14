@@ -1,5 +1,26 @@
 import React, { Component } from "react";
 import firebase from "../firebase";
+import styled from "styled-components";
+
+const Title = styled.div`
+  text-align: center;
+  padding: 1em;
+  font-size: 2em;
+  font-weight: bold;
+  
+`
+
+const Item = styled.li`
+  list-style-type: none;
+  margin: 2em;
+  background-color: white;
+  padding: .5em;
+`
+
+const Ul = styled.ul`
+  list-style: none;
+  padding-left: 0em;
+`
 
 class Saved extends Component {
     constructor() {
@@ -37,22 +58,23 @@ componentDidMount() {
 render() {
     return (
         <section className='display-item'>
-  <div className="wrapper">
-    <ul>
-      {this.state.items.map((item) => {
-          console.log(this.state.items)
-          console.log(item);
-        return (
-          <li key={item.id}>
-            
-            <h3>Artist: {item.saved[33][0].name}</h3>
-            <h5>Title: {item.saved[1]}</h5>
-          </li>
-        )
-      })}
-    </ul>
-  </div>
-</section>
+          <Title>Saved</Title>
+          <div className="wrapper">
+            <Ul>
+              {this.state.items.map((item) => {
+                  console.log(this.state.items)
+                  console.log(item);
+                return (
+                  <Item key={item.id}>
+                    
+                    <h3>Artist: {item.saved[33][0].name}</h3>
+                    <p>Title: {item.saved[1]}</p>
+                  </Item>
+                )
+              })}
+            </Ul>
+          </div>
+        </section>
     )
 }
 }

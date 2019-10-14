@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Container full>
+        <Container>
           <Navigation />
           <Header> </Header>
           <Route exact path="/" component={Main} />

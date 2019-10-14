@@ -40,7 +40,8 @@ var styles = {
   },
   bmItem: {
     // display: 'inline-block'
-    padding: '0.8em'
+    padding: '0.8em',
+    textDecoration: 'none'
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'
