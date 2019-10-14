@@ -3,14 +3,14 @@ import { slide as Menu } from 'react-burger-menu';
 
 var styles = {
   bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
-    left: '36px',
-    top: '36px'
+    position: 'relative',
+    width: '20px',
+    height: '20px',
+    left: '20em',
+    top: '.5em'
   },
   bmBurgerBars: {
-    background: '#373a47'
+    background: 'darkgray'
   },
   bmBurgerBarsHover: {
     background: '#a90000'
@@ -27,7 +27,7 @@ var styles = {
     height: '100%'
   },
   bmMenu: {
-    background: '#373a47',
+    background: 'white',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em'
   },
@@ -35,11 +35,12 @@ var styles = {
     fill: '#373a47'
   },
   bmItemList: {
-    color: '#b8b7ad',
-    padding: '0.8em'
+    color: 'darkgray',
+    padding: '1em'
   },
   bmItem: {
-    display: 'inline-block'
+    // display: 'inline-block'
+    padding: '0.8em'
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'

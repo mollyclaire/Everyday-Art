@@ -14,8 +14,8 @@ function App() {
     <Router>
       <div className="app">
         <Container full>
-        <Navigation />
-          <Header></Header>
+          <Navigation />
+          <Header> </Header>
           <Route exact path="/" component={Main} />
           <Route exact path="/saved" component={Saved} />
           
