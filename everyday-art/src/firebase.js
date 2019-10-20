@@ -1,7 +1,7 @@
 import firebase from "firebase";
 
 const config = {
-    apiKey: "AIzaSyASER5gv_eddiW5WS8596cxTge6i2KdDac",
+    apiKey: process.env.REACT_APP_FIREBASE_SECRET,
     authDomain: "everyday-art.firebaseapp.com",
     databaseURL: "https://everyday-art.firebaseio.com",
     projectId: "everyday-art",
