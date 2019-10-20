@@ -1,6 +1,5 @@
 // import axios from "axios";
 import $ from "jquery"; 
-
 // The commented code below refers to a few APIs that I could not get to work properly
 
 // const BASEURL = "https://api.harvardartmuseums.org/Person?";
@@ -34,7 +33,7 @@ search: $.ajax({
   url: 'https://www.brooklynmuseum.org/api/v2/object/' + num,
   type: 'GET',
   beforeSend: function (xhr) {
-    xhr.setRequestHeader('api_key', 'RPZUcvIfZVPE2TUM7C0ArWNxOGQIIxxF');
+    xhr.setRequestHeader('api_key', process.env.REACT_APP_BROOKLYN_SECRET);
   },
   data: {},
   success: function () {console.log ("success")},
