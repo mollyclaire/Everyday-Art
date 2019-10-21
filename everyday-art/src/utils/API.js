@@ -27,6 +27,25 @@ const artArray = ["207865", "185643", "1152", "1364", "170224", "2337", "1594", 
 let num = artArray[Math.floor(Math.random() * artArray.length)]
 console.log(num)
 
+// The commented out code below is my brainstorming for getting one element per day from the array
+// function addDay(date) {
+//   date.setDate(date.getDate() + 1);
+// }
+// var day = new Date(2019, 9, 21);
+// const dateArray = [];
+// for (var i = 0; i < artArray.length * 9; i++) {
+//   var newDay = addDay(day);
+//   dateArray.push(newDay);
+// }
+
+// function num1() {
+//   let date = new Date();
+//   let today = date.getDate();
+//   if (today === today) {
+//   return artArray[Math.floor(Math.random() * artArray.length)]
+//   } else { return }
+// }
+
 // AJAX call to the API (making a GET request to retreive an art object)
 export default {
 search: $.ajax({
