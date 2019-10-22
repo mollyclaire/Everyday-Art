@@ -2,6 +2,8 @@ import React from 'react';
 import date from 'date-and-time';
 import styled from "styled-components";
 
+/* This simple class component returns the current date (example format: "September 12") */
+
 const Div = styled.div`
     font-size: 2em;
 `

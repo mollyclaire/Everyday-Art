@@ -7,11 +7,12 @@ import firebase from "../firebase";
 import { Redirect } from "react-router-dom"
 
 
-// This class component is one that renders the artwork from the Brooklyn Museum API 
-// and displays an Art Card component based on the information received. 
+/* This class component is one that renders the artwork from the Brooklyn Museum API 
+and displays an Art Card component based on the information received. */
 class Main extends Component {
     constructor() {
         super();
+    /*The artworks array in the state refers to the data/artwork objects retrieved from the API call below*/
     this.state ={
         artworks: [],
         redirect: false
@@ -25,11 +26,13 @@ class Main extends Component {
     }
 
     searchArt () {
+        /* See API.js file to further understand this API call */
         API.search
           .then(res => {
         //   this.setState({ results: res.data })
-         console.log(res.data)
+        //  console.log(res.data)
          let results = res.data
+         /*The values method here returns an array of the containing the res.data object, so that I can map through it.*/
          let array = Object.values(results)
          
         //  results = results.map(result => {
@@ -50,6 +53,8 @@ class Main extends Component {
         //   .catch(err => console.log(err));
       })};
 
+      /* The two Redirect functions refer to the "+" button press, which redirects 
+      the user to the Saved page. */
       setRedirect = () => {
         this.setState({
           redirect: true
@@ -61,6 +66,8 @@ class Main extends Component {
         }
       }
 
+      /* This function adds the artwork displayed to Firebase (and also redirects the user using 
+        the functions above) */
       handleSubmit(e) {
           e.preventDefault();
           console.log(e);
@@ -78,6 +85,7 @@ class Main extends Component {
         return (
             <div>
             {this.state.artworks.length ? (
+                /* Refer to the console to better understand the bracketed numbers below */
                 <ArtCard
                 key={this.state.artworks.id}
                 artworks={this.state.artworks.artworks}

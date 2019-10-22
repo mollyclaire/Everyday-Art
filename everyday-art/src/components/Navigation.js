@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 
+/* This component refers to the hamburger menu on every page.
+The styling below is from the npm package documentation. */
 var styles = {
   bmBurgerButton: {
     position: 'relative',
@@ -39,7 +41,6 @@ var styles = {
     padding: '1em'
   },
   bmItem: {
-    // display: 'inline-block'
     padding: '0.8em',
     textDecoration: 'none'
   },

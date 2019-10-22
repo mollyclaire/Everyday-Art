@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-// Need to add responsiveness to this! There are no margins on mobile.
+/* I found this styled component online. */
 
 const Container = styled.div`
     padding-left: ${props => {

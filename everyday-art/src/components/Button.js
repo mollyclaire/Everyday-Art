@@ -26,6 +26,8 @@ class Button extends React.Component {
     //     this.props.saveArtwork();
     // }
 
+    /* I pass in props here, so that I can use it in the Main component and access the state there.
+    I'm thinking I should make this entire component a functional component (not a class component) and pass props through it. */
     render(props) {
         return (
             <div>

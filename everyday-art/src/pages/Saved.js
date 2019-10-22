@@ -25,9 +25,8 @@ const Ul = styled.ul`
 class Saved extends Component {
     constructor() {
         super();
-
-    
-
+    /* The state object only contains one array called items, and this refers to the saved artworks
+    that are in the database */
     this.state ={
         items: [],
         
@@ -37,9 +36,12 @@ class Saved extends Component {
 componentDidMount() {
     const itemsRef = firebase.database().ref('items');
     itemsRef.on('value', (snapshot) => {
+      /* snapshot.val() is provided by Firebase */
         let items = snapshot.val();
         console.log(items);
+        /* I created a new array called newState, so that I could push new items into it */
         let newState = [];
+        /* For every item in Firebase, push an object with the id (given by Firebase) and the artwork object data*/
         for (let item in items) {
           newState.push({
             id: item,
@@ -49,7 +51,6 @@ componentDidMount() {
         this.setState({
             items: newState
         })
-        
 })
 }
 

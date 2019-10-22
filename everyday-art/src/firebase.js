@@ -1,5 +1,6 @@
 import firebase from "firebase";
 
+/* The API Key is saved in the .env file, and I use the dotenv package in order to use "process.env". */
 const config = {
     apiKey: process.env.REACT_APP_FIREBASE_SECRET,
     authDomain: "everyday-art.firebaseapp.com",

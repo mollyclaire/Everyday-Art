@@ -12,6 +12,7 @@ require('dotenv').config();
 
 function App() {
   return (
+    /* I use the Router component provided by React Router in order to switch between "pages". */
     <Router>
       <div className="app">
         <Container>

@@ -1,8 +1,8 @@
 import React from "react"; 
 import styled from "styled-components";
-// import icon from './calendar.png';
 import Time from "../utils/Time";
 
+/* I need to restyle this a bit, since the spacing is off just a bit */
 const Art = styled.div`
     font-size: 2em;
     text-align: right;

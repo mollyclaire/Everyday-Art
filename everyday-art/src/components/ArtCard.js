@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+/* This ArtCard component is the main card on the page that contains the image, artist, year, medium, and description of the work. */
+
 function ArtCard(props) {
 const Image = styled.img`
   display: block;
@@ -8,8 +10,6 @@ const Image = styled.img`
   margin-right: auto;
   width: 75%;
 `
-
-
 
 const Container = styled.div`
   display: flex;
@@ -20,8 +20,6 @@ const Container = styled.div`
   width: 75%;
   box-shadow: 0 0 20px rgba(0, 0, 0, .05), 0 0px 40px rgba(0, 0, 0, .09);
   border-radius: 5px;
-  
-
 `
 
 const Paragraph = styled.div`
@@ -53,6 +51,8 @@ return(
           <p>Medium: {props.medium}</p> 
           <p>Year: {props.year}</p>
         </Details>
+        {/* The regex below eliminates some of the html elements from the text, 
+        but I still need to figure out how to remove the left and right quotation marks. */}
         <Paragraph>Description: {props.description.replace(/(<([^>]+)>)/ig,"")}</Paragraph>
       </Container>
       

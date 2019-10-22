@@ -38,13 +38,14 @@ console.log(num)
 //   dateArray.push(newDay);
 // }
 
+
 // function num1() {
 //   let date = new Date();
 //   let today = date.getDate();
-//   if (today === today) {
-//   return artArray[Math.floor(Math.random() * artArray.length)]
-//   } else { return }
+  
 // }
+
+
 
 // AJAX call to the API (making a GET request to retreive an art object)
 export default {
